@@ -40,7 +40,7 @@
         <br>CPF/CNPJ:
         <br><input type="text" id="inpcpfalvo" pattern="\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" title="CPF: xxx.xxx.xxx-xx \ CNPJ: xx.xxx.xxx/xxxx-xx" value="xxx.xxx.xxx-xx">
     </div>  
-    <div>
+    <div id="bancodestino">
         <h1>Escolha o banco destinatário:</h1>
         <select id="inpbanco">
             <option value="acesso" selected>Acesso Soluções S.A.</option>
@@ -57,8 +57,10 @@
         </select><br>
         
     </div>
-    <button onclick="generate()">GERAR OFÍCIO .DOCX</button>
-    <br><br><a href="https://docs.google.com/spreadsheets/d/18J7v1jp0gUWQrGLB41MPKwgaOwpfW_763MsNvpkcBfs/edit?usp=sharing">LINK PARA SUGESTÕES</a>
+    <div id="fim">
+        <button onclick="generate()">GERAR OFÍCIO .DOCX</button>
+        <br><br><a href="https://docs.google.com/spreadsheets/d/18J7v1jp0gUWQrGLB41MPKwgaOwpfW_763MsNvpkcBfs/edit?usp=sharing">LINK PARA SUGESTÕES / ATUALIZAÇÃO</a>
+    </div>
     
 </body>
 <!-- inicio de carregamento dos script necessários para abri modelo .DOCX e salvar resultado-->
