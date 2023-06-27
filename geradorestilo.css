@@ -2,44 +2,54 @@ body {
     min-width: 600px;
     font-family: "Roboto", sans-serif;
     text-align: left;
-    font-size:x-small;
+    font-size: 13pt;
     background-color: rgb(0, 0, 0);
 }
 
 .pcsc {
     float: left;
     margin-top: 180px;
-    margin-left: 28px;
+    margin-left: 10px;
 }
 
 h1 {
-    font-size: small;
+    font-size: 16pt;
     text-align: center;
     padding: 5px 30px;
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #fff;
     color: #2596be;
 }
 
 div#cabecalho {
-    width: 330px;
-    background-color: rgb(36, 34, 25);
-    color: white;
-    margin-left: 120px;
-    margin-right: 150px;
-    display: flex;
-    font-size: 9pt;
+    width: 380px;
+    background-color: rgb(255, 220, 63);
+    color: rgb(0, 0, 0);
+    font-size: 10pt;
     font-weight: bold;
-    text-align: right;
-    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    letter-spacing: 100%;
+    word-spacing: 5%;
+    line-height: 130%;
     border: 0px;
     box-shadow: rgb(255, 244, 88) 0px 20px 30px -10px;
 }
 
+div#titulo {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 220, 63);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18pt;
+}
+
 div {
-    width: 280px;
+    width: 380px;
     background-color: #d8e8ee;
-    margin-left: 150px;
+    margin-left: 120px;
     margin-right: 150px;
     padding: 10px;
     box-shadow: rgb(224, 231, 238) 0px 20px 30px -10px;
@@ -47,34 +57,43 @@ div {
     border: 1px solid #2596be;
 }
 
-
-
 input {
-    width: 260px;
+    padding: 5px;
+    width: 360px;
     text-align: center;
     margin-bottom: 10px;
-    color: rgb(189, 6, 6);
-    font-weight: 600;
-    
+    color: rgb(145, 10, 10);
+    font-size: 14pt;
+    font-weight: 400
 }
 
 input#inpoficio {
-    background-color: rgb(203, 243, 187);
+    background-color: rgb(255, 255, 255);
+    color: red;
     font-weight: bolder;
-    font-size: medium;
+    font-size: 15pt;
     max-width: 80px;
+}
+
+select {
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: rgb(145, 10, 10);
+    font-size: 14pt;
 }
 
 button {
     margin-left: 220px;
     margin-right: 150px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px 30px;
     background-color: #fff;
     color: #2596be;
     border: 2px solid #2596be;
     border-radius: 10px;
-    
+    font-size: 14pt;
+    font-weight: bold;
     }
     button:hover {
         background-color: #2596be;

@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="geradorestilo.css" />
 </head>
 <body>
+    
     <img src="icones/logpcsc.png" alt="pcsc" width="95px" height="115px" class="pcsc">
-    <div id="cabecalho">
-        <img src="icones/bank.png" alt="bank" width="65px" height="65px">
+
+    <div id="cabecalho"> 
         POLÍCIA CIVIL DO ESTADO DE SANTA CATARINA
         <br>DPCO/FRON DE SÃO LOURENÇO DO OESTE
-        <br><br>
-        GERADOR DE OFÍCIO - BANCOS
-        <br><br>    
+        <br>
     </div>
+    <div id="titulo">
+        <img src="icones/bank.png" alt="bank" width="85px" height="85px">
+    GERADOR DE OFÍCIO - BANCOS</div>
                
     <div>
         <h1>Insira os dados do ofício:</h1>
-        <input type="number" id="inpoficio"> / ANO / 
+        <input type="number" id="inpoficio" title="DIGITE O NÚMERO DO OFÍCIO"> / ANO / 
             <select name="policial" id="policial">
                 <option value="gab">GAB</option>
                 <option value="avar">AVAR</option>
@@ -29,13 +31,14 @@
                 <option value="dbn">DBN</option>
                 <option value="am">AM</option>
             </select> / DPCO-SLO
-        <br>Boletim de Ocorrência / Procedimento de origem: <input type="text" id="inporigem"> 
+        <br>Procedimento de origem: <input type="text" id="inporigem" value="Boletim de Ocorrência xxx.2023.xxxxx" title="BO / IP / APF"> 
     </div>
     <div>
         <h1>Insira os dados do alvo:</h1>
-        NOME: <input type="text" id="inpnalvo">
-        <br>CPF:
-        <br><input type="text" id="inpcpfalvo">
+        NOME: 
+        <br><input type="text" id="inpnalvo" value="Fulano de Tal">
+        <br>CPF/CNPJ:
+        <br><input type="text" id="inpcpfalvo" pattern="\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" title="CPF: xxx.xxx.xxx-xx \ CNPJ: xx.xxx.xxx/xxxx-xx" value="xxx.xxx.xxx-xx">
     </div>  
     <div>
         <h1>Escolha o banco destinatário:</h1>
@@ -52,6 +55,7 @@
             <option value="picpay">PicPay Instituição de Pag. S/A</option>
             <option value="santander">Santander</option>
         </select><br>
+        
     </div>
     <button onclick="generate()">GERAR OFÍCIO</button>
     
