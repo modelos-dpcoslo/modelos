@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GERAR OFÍCIO - OPERADORAS</title>
+    <link rel="stylesheet" href="css/estiloper.css">
+</head>
+<body>
+    
+    <header>
+        <p>POLÍCIA CIVIL DO ESTADO DE SANTA CATARINA</p>             
+        <p>DPCO/FRON DE SÃO LOURENÇO DO OESTE</p>
+    </header>
+    
+    <div id="menulateral">
+        <img src="icones/logpcsc.png" alt="pcsc" width="95px" height="115px" class="pcsc">
+
+        <a href="index.html">
+            <button class='botaolink'>
+                <img src="icones/bank.png" alt="GERADOR DE OFÍCIOS PARA BANCOS" width="60px">
+                <h3>REQUISIÇÃO PARA BANCOS</h3>
+            </button>
+        </a>
+
+        <a href="opera.html">
+            <button class='botaolink'>
+                <img src="icones/tower.png" alt="GERADOR DE OFÍCIOS PARA OPERADORAS DE TELEFONIA" width="50px">
+                <h3>REQUISIÇÃO PARA OPERADORAS</h3>
+            </button>
+        </a>
+
+    </div>
+    <div>
+        <main>
+            <div id="cabecalho">
+                <img src="icones/tower.png" alt="Antena de celular" id="antena">
+                <h1>REQUISITA DADOS<BR>OPERADORAS DE TELEFONIA</h1>
+            </div>
+            <div id="conteudo">
+                <h2>DADOS DO OFÍCIO</h2>
+                <label>Número do ofício:</label>
+                <br>
+                <input type="number" id="inpoficio" title="DIGITE O NÚMERO DO OFÍCIO" class="dadosof"> / ANO /
+                <select name="policial" id="policial" class="dadosof">
+                    <option value="gab">GAB</option>
+                    <option value="avar">AVAR</option>
+                    <option value="vls">VLS</option>
+                    <option value="svp">SVP</option>
+                    <option value="dbn">DBN</option>
+                    <option value="am">AM</option>
+                </select> / DPCO-SLO
+                <br>
+                <label>Procedimento de origem:</label>
+                <br>
+                <input type="text" id="inporigem" value="Boletim de Ocorrência xxx.2023.xxxxx" title="BO / IP / APF">
+                
+                <h2>TIPO DE PESQUISA</h2>
+                <div id="divbotoesindexador">
+                    <button id='cpf' class='indexador' onclick='pesquisacpf()' title="REQUISITA AS LINHAS E DADOS CADASTRAIS DO CPF">
+                        <img src="icones/id.png" alt="CPF" width="60px">
+                        <h3>PESQUISA POR CPF</h3>
+                    </button>
+                    
+                    <button id='imei' class='indexador' onclick='pesquisaimei()'  title="REQUISITA AS LINHAS/ DADOS CADASTRAIS QUE USARAM O IMEI">
+                        <img src="icones/imei.png" alt="IMEI" width="60px">
+                        <h3>PESQUISA POR IMEI</h3>
+                    </button>
+                    
+                    <button id='sim' class='indexador' onclick='pesquisasim()'  title="REQUISITA OS DADOS CADASTRAIS E IMEIS QUE USARAM LINHA">
+                        <img src="icones/simcard.png" alt="SIM CARD" width="45px">
+                        <h3>PESQUISA PELA LINHA</h3>
+                    </button>
+                </div>
+
+                <div id="divalvo">
+                    <h4>Insira o(a) <strong id="tipoalvo">()</strong> :</h4>
+                    <input type="text" id="alvo" value="xxx.xxx.xxx-xx">
+                </div>
+
+                <div id="divdatas">
+                    <span class="sdatas">
+                        <label>Data inicial:</label><br>
+                        <input type="date" name="datainicio" id="datainicio" class="inpdata">
+                    </span>
+                    <span class="sdatas">
+                        <label>Data final:</label><br>
+                        <input type="date" name="datafim" id="datafim" class="inpdata">
+                    </span>
+                </div>
+        
+        
+                <h2>Requisitar para as operadoras:</h2>
+                    <div id="requisitar">
+                        <div id="operadoras">
+                            <input type="checkbox" name="tim" id="tim" class="operadoras" checked="true">
+                            <img src="icones/tim.png" alt="Operadora TIM" width="65px">
+                            <br>
+                            <input type="checkbox" name="vivo" id="vivo" class="operadoras">
+                            <img src="icones/vivo.png" alt="Operadora VIVO" width="65px">
+                            <br>
+                            <input type="checkbox" name="claro" id="claro" class="operadoras">
+                            <img src="icones/claro.png" alt="Operadora Claro" width="65px">
+                        </div>
+                        <div id='prazo'>
+                            <label>Prazo:</label>
+                            <br>
+                            <input type="number" id="inpprazo" title="PRAZO PARA RESPOSTA" class="dadosof" value="5">
+                            <h2>DIAS</h2>
+                        </div>
+                    </div>
+                </div>
+        
+            <div id="fim">
+                <button onclick="generate()" id="gerardocx">GERAR OFÍCIO .DOCX</button>
+                <br>
+                
+                </div>
+        </main>
+    </div>
+    
+    <footer>
+        <a href="https://docs.google.com/spreadsheets/d/18J7v1jp0gUWQrGLB41MPKwgaOwpfW_763MsNvpkcBfs/edit?usp=sharing">LINK PARA SUGESTÕES / ATUALIZAÇÃO</a>
+        <br>
+        <em>(Última: 20/07/2023)</em>
+    </footer>
+</body>
+
+<!-- inicio de carregamento dos script necessários para abri modelo .DOCX e salvar resultado-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.37.11/docxtemplater.js"></script>
+<script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+<script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip-utils.js"></script>
+<!-- fim de carregamento dos scripts necessários-->
+
+<!-- Carregar SCRIPTS comuns dos geradores de ofícios-->
+<script src="js/comuns.js"></script>
+
+<script>
+    // ELEMENTO ALVO SERÁ USADO POR VÁRIOS SCRIPTS
+    elalvo = document.querySelector('#alvo'); 
+
+    /* SCRIPT para definir o TIPO DE REQUISIÇÃO */
+    var eltipoalvo = document.querySelector('#tipoalvo');
+
+    function pesquisacpf() {
+        eltipoalvo.innerHTML = 'CPF';
+        valtipoalvo = 'CPF';
+        valdadosreq = 'Linhas telefônicas e respectivos dados cadastrais, vinculados ao seguinte CPF, no período referido.';
+        valassunto = 'Requisita informações por CPF';
+        elalvo.value = "xxx.xxx.xxx-xx";
+    }
+
+    function pesquisaimei() {
+        eltipoalvo.innerHTML = 'IMEI';
+        valtipoalvo = 'IMEI';
+        valdadosreq = 'Linhas telefônicas e respectivos dados cadastrais, que tenham sido vinculadas ao(s) seguinte(s) IMEI(s), no período referido.';
+        valassunto = 'Requisita informações por IMEI';
+        elalvo.value = "xxx.xxx.xxx.xxx.xxx";
+    }
+
+    function pesquisasim() {
+        eltipoalvo.innerHTML = 'LINHA';
+        valtipoalvo = 'LINHA';
+        valdadosreq = 'Dados cadastrais e IMEIs vinculados à linha telefônica, no período referido.';
+        valassunto = 'Requisita informações por LINHA TELEFÔNICA';
+        elalvo.value = "(xx) 9xxxx-xxxx";
+    }
+
+    pesquisaimei();  // Coloca pesquisa IMEI como padrão ao iniciar
+
+    /* FIM SCRIPT para definir o TIPO DE REQUISIÇÃO */
+    
+    /* SCRIPT para definir OPERADORAS DESTINATÁRIAS */
+    function definitirOperadoras() {
+        eloptim = document.querySelector('#tim');
+        elopclaro = document.querySelector('#claro');
+        elopvivo = document.querySelector('#vivo');
+        valopdest = '';
+
+        if (eloptim.checked) {
+            valopdest += 'Operadora TIM Celular S.A.\nGRAOP\nInfoguard\n\n';
+        }
+        if (elopvivo.checked) {
+            valopdest += 'Operadora VIVO S.A.\nDivisão de Serviços Especiais\nPORTAL JUD\n\n';
+        }
+        if (elopclaro.checked) {
+            valopdest += 'Operadora Claro S.A.\nDepartamento Jurídico\nofícios.juridico@claro.com.br';
+        }
+    }
+
+
+
+    /* SCRIPT para CAPTURAR DADOS DOS FORMULÁRIO */
+    function capturarDados() {
+        // Capturar número do OFÍCIO
+        eloficio = document.querySelector('#inpoficio')
+        valoficio = eloficio.value      
+
+        // Capturar nome e e-mail do policial   (variáveis GLOBAIS criadas na própria função)
+        nomePolicial();
+                
+        // Capturar procedimento de Origem BO/IP
+        elorigem = document.querySelector('#inporigem');
+        valorigem = elorigem.value;
+        
+        // Gerar DATA atual
+        valdatareq = obterData();
+
+        // Capturar TIPO DE REQUISIÇÃO
+
+        // Capturar  ALVO ( cpf | imei | sim card)
+        valalvo = elalvo.value;
+
+        // Capturar PERÍODO da requisição
+        obterPeriodo();
+
+        // Capturar OPERADORAS Destinatárias
+        definitirOperadoras();
+
+        // Capturar o PRAZO para resposta
+        elprazo = document.querySelector('#inpprazo');
+        valprazo = elprazo.value;
+
+    }
+
+    /* FIM DO SCRIPT para CAPTURAR DADOS DOS FORMULÁRIO. */
+       
+    
+
+    function loadFile(url, callback) {
+        PizZipUtils.getBinaryContent(url, callback);
+    }
+    window.generate = function generate() {
+        loadFile(
+            "modelos/modeloofoper.docx",
+            function (error, content) {
+                if (error) {
+                    throw error;
+                }
+                const zip = new PizZip(content);
+                const doc = new window.docxtemplater(zip, {
+                    paragraphLoop: true,
+                    linebreaks: true,
+                });
+
+                // Executa a função para capturar os dados do formulário
+                capturarDados();
+                
+                
+                // RENDERIZAR O DOCUMENTO (Troca {insoficio} do modelo .docx pelo valor de valoficio, e assim por diante ...)
+                doc.render({
+                    insoficio: valoficio,
+                    insano: ano,
+                    inspolicial: varsiglapolicial,
+                    insorigem: valorigem, 
+                    insdata: valdatareq,
+                    insassunto: valassunto,
+                    insdadosreq: valdadosreq,
+                    instipo: valtipoalvo,
+                    insalvo: valalvo,
+                    insdatainicio: valdatain,
+                    insdatafim: valdatafim,
+                    insemail: varemailpolicial,
+                    insoperadora: valopdest, 
+                    insprazo: valprazo                    
+                });
+
+                const blob = doc.getZip().generate({
+                    type: "blob",
+                    mimeType:
+                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    // compression: DEFLATE adds a compression step.
+                    // For a 50MB output document, expect 500ms additional CPU time
+                    compression: "DEFLATE",
+                });
+                
+                
+                // Output the document using Data-URI
+                let nomefinal = 'Oficio-' + valoficio + '-' + ano + '-' +       varsiglapolicial + '-OPERADORA';
+                saveAs(blob, nomefinal + "_.docx");
+                window.alert('Ofício gerado! Confira os DADOS antes de ENVIAR AO BANCO:\n\n');
+                
+                
+            }
+        );
+    };
+    
+</script>
+</html>
+
+

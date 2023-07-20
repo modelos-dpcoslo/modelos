@@ -1,0 +1,222 @@
+:root {
+    --cor-1: #E6E6E6;
+    --cor-2: #067BC2;
+    --cor-3: #2b2c2e;
+    --cor-4: rgb(197, 32, 32);
+    --cor-5: #E4C46E;
+}
+
+body {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    font-size: 13pt;
+    background-color: rgb(0, 0, 0);
+    color: black;
+}
+
+input:hover {
+    background-color: #c4c4c47e;
+}
+
+input:focus {
+    background-color: #c4c4c47e;
+}
+
+header {
+    padding: 0px 0px 20px 130px;
+    height: 20px;
+    text-align: center;
+    background-image: linear-gradient(to top, black, var(--cor-3));
+    line-height: 12pt;    
+}
+
+header p {
+    color: rgb(78, 78, 78);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 0.9em;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+}
+
+.pcsc {
+    float: top;
+    padding-left: 22px;
+}
+
+#menulateral {
+    background-image: linear-gradient(to bottom, black, var(--cor-3));
+    margin: 0px ;
+    padding: 0px;
+    float: left;
+    position: static;
+    width: 125px;
+    height: 500px;
+    border: 10px solid black;
+    border-radius: 0px 0px 15px;
+    box-shadow: inset 3px 3px 10px 10px black;
+}
+
+#menulateral > a {
+    margin: 0px;
+}
+
+.botaolink {
+    width: 100px;
+    height: 150px;
+    background-image: linear-gradient(to bottom, black, var(--cor-3));
+    box-shadow: inset 1px 1px 10px 5px black;
+    margin-left: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    transition: 0.4s;
+}
+
+.botaolink:hover {
+    height: 160px;
+    box-shadow: 3px 3px 15px 2px white;
+} 
+
+.botaolink > h3 {
+    color: var(--cor-5);
+    font-size: 0.75em;
+}
+
+#conteudobancos {
+    margin: auto;
+    margin: 0px 200px;
+    background-color: black;
+    box-shadow: none;
+    border: none;
+}
+
+h1 {
+    background-color: white;
+    color: var(--cor-2);
+    font-size: 1.1em;
+    padding: 4px 4px 2px 4px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+div#cabecalho {
+    width: 380px;
+    background-color: rgb(255, 220, 63);
+    color: rgb(0, 0, 0);
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    letter-spacing: 100%;
+    word-spacing: 5%;
+    line-height: 130%;
+    border: 0px;
+    box-shadow: rgb(255, 244, 88) 0px 90px 40px 15px;
+}
+
+div#titulo {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 220, 63);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18pt;
+}
+
+div {
+    width: 380px;
+    background-color: #d8e8ee;
+    margin-right: 150px;
+    padding: 10px;
+    box-shadow: rgb(224, 231, 238) 3px 2px 20px 1px;
+    border-radius: 10px;
+    border: 1px solid #2596be;
+}
+
+div#bancodestino {
+    text-align: center;
+}
+
+div#fim {
+    width: 420px;
+    background-color: black;
+    margin-top: 20px;
+    margin-right: 150px;
+    text-align: center;
+    align-items: center;
+    padding: 1px;
+    box-shadow: none;
+    border-radius: 10px;
+    border: 0px;
+}
+
+input {
+    padding: 5px;
+    width: 360px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(145, 10, 10);
+    font-size: 14pt;
+    font-weight: 400
+}
+
+input#inpoficio {
+    background-color: rgb(255, 255, 255);
+    color: red;
+    font-weight: bolder;
+    font-size: 15pt;
+    max-width: 80px;
+}
+
+select {
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: rgb(145, 10, 10);
+    font-size: 14pt;
+}
+
+#gerardocx {
+    margin-top: 2px;
+    padding: 6px 6px;
+    background-color: #fff;
+    color: #2596be;
+    border: 2px solid #2596be;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    }
+    #gerardocx:hover {
+        background-color: #2596be;
+        color: #fff;
+        box-shadow: rgb(185, 9, 9) 0px 20px 30px -10px;
+        }
+
+footer {
+    text-align: center;
+    
+}
+
+footer > a {
+    padding: 2px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.5s;
+}
+
+footer > a:hover {
+    font-size: 1em;
+    position: relative;
+    color: rgb(167, 11, 167);
+}
+
+em {
+    color: rgb(59, 59, 59);
+    font-size: 0.9em;
+}
