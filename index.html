@@ -5,38 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de ofício - BANCOS</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/geradorestilo.css" />
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/bancos.css" />
+    
 </head>
 <body>
-    <header>
-        <p>POLÍCIA CIVIL DO ESTADO DE SANTA CATARINA</p>             
-        <p>DPCO/FRON DE SÃO LOURENÇO DO OESTE</p>
-    </header>
-    
-    <div id="menulateral">
-        <img src="icones/logpcsc.png" alt="pcsc" width="95px" height="115px" class="pcsc">
-
-        <a href="index.html">
-            <button class='botaolink'>
-                <img src="icones/bank.png" alt="GERADOR DE OFÍCIOS PARA BANCOS" width="60px">
-                <h3>REQUISIÇÃO PARA BANCOS</h3>
-            </button>
-        </a>
-
-        <a href="opera.html">
-            <button class='botaolink'>
-                <img src="icones/tower.png" alt="GERADOR DE OFÍCIOS PARA OPERADORAS DE TELEFONIA" width="50px">
-                <h3>REQUISIÇÃO PARA OPERADORAS</h3>
-            </button>
-        </a>
-
-    </div>
-
-    <div id="conteudobancos">
-        <div id="titulo">
-            <img src="icones/bank.png" alt="bank" width="85px" height="85px">
-        GERADOR DE OFÍCIO - BANCOS</div>
-        
+    <main id="conteudo">
+        <div id="cabecalho">
+            <img src="icones/bank.png" alt="bank" width="85px" height="85px" id="imgbank">
+            <h1>REQUISITA DADOS TITULAR - BANCOS -</h1>
+        </div>
         <div>
             <h1>Insira os dados do ofício:</h1>
             <input type="number" id="inpoficio" title="DIGITE O NÚMERO DO OFÍCIO"> / ANO /
@@ -49,8 +27,7 @@
                     <option value="am">AM</option>
                 </select> / DPCO-SLO
             <br>Procedimento de origem: <input type="text" id="inporigem" value="Boletim de Ocorrência xxx.2023.xxxxx" title="BO / IP / APF">
-        </div>
-        <div>
+       
             <h1>Insira os dados do alvo:</h1>
             NOME:
             <br><input type="text" id="inpnalvo" value="Fulano de Tal">
@@ -81,12 +58,8 @@
             <button onclick="generate()"  id="gerardocx">GERAR OFÍCIO .DOCX</button>
             <br><br>
         </div>
-        <footer>
-            <a href="https://docs.google.com/spreadsheets/d/18J7v1jp0gUWQrGLB41MPKwgaOwpfW_763MsNvpkcBfs/edit?usp=sharing">LINK PARA SUGESTÕES / ATUALIZAÇÃO</a>
-            <br>
-            <em>(Última: 20/07/2023)</em>
-        </footer>
-    </div>
+        <footer id="rodape"></footer>
+    </main>
     
 </body>
 <!-- inicio de carregamento dos script necessários para abri modelo .DOCX e salvar resultado-->
@@ -97,8 +70,8 @@
 <!-- fim de carregamento dos scripts necessários-->
 
 <!-- Carregar SCRIPTS comuns dos geradores de ofícios-->
+<script src='js/menu.js'></script>
 <script src="js/comuns.js"></script>
-
 <script>
     
     /* INICIO DO SCRIPT para configurar BANCO destinatário conforme a opção do banco selecionado*/

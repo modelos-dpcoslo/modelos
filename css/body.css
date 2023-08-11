@@ -1,0 +1,74 @@
+:root {
+    --cor-1: #E6E6E6;
+    --cor-2: #067BC2;
+    --cor-3: #2b2c2e;
+    --cor-4: rgb(197, 32, 32);
+    --cor-5: #E4C46E;
+}
+
+* {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    font-size: 13pt;
+    background-color: rgb(0, 0, 0);
+    color: black;
+    min-width: 800px;
+}
+
+main {
+    width: 440px;
+    margin: auto;
+}
+
+div#cabecalho {
+    background-image: linear-gradient(to bottom, black, var(--cor-3));
+    text-align: center;
+    height: 100px;
+    min-width: 420px;
+    border-radius: 15px; 
+}
+
+div#cabecalho > h1 {
+    font-size: 1.27em;
+    padding-top: 20px 0px 0px 0px;
+}
+
+input:hover {
+    background-color: #cdfb4e2e;
+}
+
+input:focus {
+    caret-color: red;
+}
+
+#gerardocx {
+    margin-top: 2px;
+    padding: 6px 6px;
+    background-color: #fff;
+    color: #2596be;
+    border: 2px solid #2596be;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    }
+    #gerardocx:hover {
+        background-color: #2596be;
+        color: #fff;
+        box-shadow: rgb(185, 9, 9) 0px 20px 30px -10px;
+        }
+
+div#fim {
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+    box-shadow: none;
+    border: 0px;
+}

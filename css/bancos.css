@@ -1,0 +1,90 @@
+
+body {  
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('../icones/moneybg.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: auto 50%; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+    background-position: top; /* Centraliza a imagem no elemento */
+    background-position: 80%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#conteudobancos {
+    margin: auto;
+    background-color: black;
+    box-shadow: none;
+    border: none;
+}
+
+div#cabecalho {
+    display: flex;
+    background-color: rgb(255, 220, 63);
+    color: rgb(0, 0, 0);
+    box-shadow: #E4C46E 3px 3px 30px 5px;
+    min-width: 380px;
+    padding: 0px 10px;
+}
+
+#imgbank {
+    width: 74px;
+    height: 81px;
+    padding-top: 5px;
+}
+
+div#cabecalho > h1 {
+    color: #E4C46E;
+    text-shadow: 3px 3px 10px #25252588;
+    width: 280px;
+    letter-spacing: 100%;
+    word-spacing: 5%;
+    line-height: 130%;
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+h1 {
+    background-color: white;
+    color: var(--cor-2);
+    font-size: 1.1em;
+    padding: 4px 4px;
+    margin: 5px 0px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+div {
+    width: 380px;
+    background-color: #d8e8ee;
+    padding: 10px;
+    box-shadow: rgba(24, 24, 24, 0.827) 3px 2px 20px 1px;
+    border-radius: 10px;
+}
+
+div#bancodestino {
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+    width: 360px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(145, 10, 10);
+    font-size: 14pt;
+    font-weight: 400
+}
+
+input#inpoficio {
+    background-color: rgb(255, 255, 255);
+    color: red;
+    font-weight: bolder;
+    font-size: 15pt;
+    max-width: 80px;
+}
+
+select {
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: rgb(145, 10, 10);
+    font-size: 14pt;
+}

@@ -4,38 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GERAR OFÍCIO - OPERADORAS</title>
-    <link rel="stylesheet" href="css/estiloper.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/opera.css">
+    
 </head>
 <body>
     
-    <header>
-        <p>POLÍCIA CIVIL DO ESTADO DE SANTA CATARINA</p>             
-        <p>DPCO/FRON DE SÃO LOURENÇO DO OESTE</p>
-    </header>
-    
-    <div id="menulateral">
-        <img src="icones/logpcsc.png" alt="pcsc" width="95px" height="115px" class="pcsc">
-
-        <a href="index.html">
-            <button class='botaolink'>
-                <img src="icones/bank.png" alt="GERADOR DE OFÍCIOS PARA BANCOS" width="60px">
-                <h3>REQUISIÇÃO PARA BANCOS</h3>
-            </button>
-        </a>
-
-        <a href="opera.html">
-            <button class='botaolink'>
-                <img src="icones/tower.png" alt="GERADOR DE OFÍCIOS PARA OPERADORAS DE TELEFONIA" width="50px">
-                <h3>REQUISIÇÃO PARA OPERADORAS</h3>
-            </button>
-        </a>
-
-    </div>
     <div>
-        <main>
+        <main id="conteudo">
             <div id="cabecalho">
                 <img src="icones/tower.png" alt="Antena de celular" id="antena">
-                <h1>REQUISITA DADOS<BR>OPERADORAS DE TELEFONIA</h1>
+                <h1>REQUISITA DADOS<BR>- OPERADORAS DE TELEFONIA -</h1>
             </div>
             <div id="conteudo">
                 <h2>DADOS DO OFÍCIO</h2>
@@ -119,11 +99,7 @@
         </main>
     </div>
     
-    <footer>
-        <a href="https://docs.google.com/spreadsheets/d/18J7v1jp0gUWQrGLB41MPKwgaOwpfW_763MsNvpkcBfs/edit?usp=sharing">LINK PARA SUGESTÕES / ATUALIZAÇÃO</a>
-        <br>
-        <em>(Última: 20/07/2023)</em>
-    </footer>
+    <footer id="rodape"></footer>
 </body>
 
 <!-- inicio de carregamento dos script necessários para abri modelo .DOCX e salvar resultado-->
@@ -135,7 +111,7 @@
 
 <!-- Carregar SCRIPTS comuns dos geradores de ofícios-->
 <script src="js/comuns.js"></script>
-
+<script src='js/menu.js'></script>
 <script>
     // ELEMENTO ALVO SERÁ USADO POR VÁRIOS SCRIPTS
     elalvo = document.querySelector('#alvo'); 
@@ -279,7 +255,7 @@
                 // Output the document using Data-URI
                 let nomefinal = 'Oficio-' + valoficio + '-' + ano + '-' +       varsiglapolicial + '-OPERADORA';
                 saveAs(blob, nomefinal + "_.docx");
-                window.alert('Ofício gerado! Confira os DADOS antes de ENVIAR AO BANCO:\n\n');
+                window.alert('Ofício gerado! Confira os DADOS antes de ENVIAR PARA A(S) OPERADORA(S)!\n\n');
                 
                 
             }
