@@ -39,6 +39,7 @@
             <select id="inpbanco">
                 <option value="acesso" selected>Acesso Soluções S.A.</option>
                 <option value="bb">Banco do Brasil SA</option>
+                <option value="brb">Banco de Brasília - BRB</option>
                 <option value="pan">Banco Pan</option>
                 <option value="bradesco">Bradesco</option>
                 <option value="inter">Banco Inter</option>
@@ -48,8 +49,10 @@
                 <option value="itau">Itaú</option>
                 <option value="mercadopago">Mercado Pago.com Ltda.</option>
                 <option value="n26">N26 Tecnologia S.dePag. Ltda.</option>
+                <option value="neon">Neon Pagamentos S.A.</option>
                 <option value="pagseguro">Pagseguro Internet S/A</option>
                 <option value="picpay">PicPay Instituição de Pag. S/A</option>
+                <option value="recargapay">Recargapay Instituição de Pag.</option>
                 <option value="santander">Santander</option>
             </select><br>
         
@@ -85,6 +88,9 @@
             case 'bb':
                 return "Banco do Brasil SA\nDiretoria de Operações - DIOPE\nCentral de Ofícios\ncenopserv.oficioscwb@bb.com.br";
                 break;
+            case 'brb':
+                return "Banco de Brasília - BRB\nCNPJ n. 00.000.208/0001-00\nsimba@brb.com.br";
+                break;
             case 'pan':
                 return "BANCO PAN S.A.\nCNPJ 59.285.411/0001-13\noficios.legal@grupopan.com";
                 break;
@@ -104,19 +110,25 @@
                 return "Banco Inter\nCNPJ n. 00.416.968/0001-01\noficios@bancointer.com.br";
                 break;
             case 'itau':
-                return "ITAÚ UNIBANCO\nGERÊNCIA DE OFÍCIOS E SIST. MOVIMENTAÇÃO BANCÁRIA\nCNPJ 60.701.190/0001-04\nitaujudicial@itau-unibanco.com.br";
+                return "ITAÚ UNIBANCO\nGERÊNCIA DE OFÍCIOS E SIST. MOVIMENTAÇÃO BANCÁRIA\nCNPJ n. 60.701.190/0001-04\nitaujudicial@itau-unibanco.com.br";
                 break;
             case 'mercadopago':
-                return "MERCADOPAGO.COM INSTITUIÇÃO DE PAGAMENTO LTDA.\nCNPJ: 10.573.521/0001-91\noficios@mercadolivre.com";
+                return "MERCADOPAGO.COM INSTITUIÇÃO DE PAGAMENTO LTDA.\nCNPJ. 10.573.521/0001-91\noficios@mercadolivre.com";
                 break;
             case 'n26':
                 return "N26 TECNOLOGIA E SOLUCOES DE PAGAMENTO LTDA.\nCNPJ - 33.781.963/0001-29\nlegal@n26brasil.com";
                 break;
+            case 'neon':
+                return "Neon Pagamentos S.A.\nCNPJ n. 20.855.875/0001-82\noficios@neon.com.br";
+                break;
             case 'pagseguro':
-                return "PAGSEGURO INTERNET S/A\nCNPJ: 08.561.701/0001-01\nintimauol@uolinc.com";
+                return "PAGSEGURO INTERNET S/A\nCNPJ n. 08.561.701/0001-01\nintimauol@uolinc.com";
                 break;
             case 'picpay':
-                return "PICPAY INSTITUIÇÃO DE PAGAMENTO S/A\nCNPJ: 22.896.431/0001-10\njuridico@picpay.com";
+                return "PICPAY INSTITUIÇÃO DE PAGAMENTO S/A\nCNPJ n. 22.896.431/0001-10\njuridico@picpay.com";
+                break;
+            case 'recargapay':
+                return "Recargapay Instituição de Pagamento Ltda\nCNPJ n. 11.275.560/0001-75\nbackofficeccsjud@recargapay.com";
                 break;
             case 'santander':
                 return "Banco Santander\nOfícios Judiciais e Reguladores\nCNPJ n. 90.400.888/0001-42\ngerenciaoficios@santander.com.br";
